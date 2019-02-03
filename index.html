@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<title>ГАПОУ "Камышинский политехнический колледж"</title>
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+	<div class="header-menu">
+		<nav class="clearfix">
+			<ul class="clearfix">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О колледже</a></li>
+				<li><a href="#">Арбитуриенту</a></li>
+				<li><a href="#">Студенту</a></li>
+				<li><a href="#">Расписание</a></li>
+			</ul>
+			<a href="#" id="pull" class="menu-btn">Меню</a>
+		</nav>
+		<div class="menu-logo"></div>
+	</div>
+	<div class="news">
+	<div class="news-word">
+		<span>НОВОСТИ</span>
+		</div>
+		<div class="new-block">
+			<img src="img/news.png">
+			<p>Смотрите на нас как на равных и бла бла бла</p>
+			<span>19.12.2018</span>
+		</div>
+		<div class="new-block">
+			<img src="img/news.png">
+			<p>Смотрите на нас как на равных</p>
+			<span>19.12.2018</span>
+		</div>
+		<div class="new-block">
+			<img src="img/news.png">
+			<p>Смотрите на нас как на равных</p>
+			<span>19.12.2018</span>	
+		</div>
+	</div>
+	<div class="timetable">
+	<div class="timetable-word">
+		<span>РАСПИСАНИЕ</span>
+	</div>
+		<div class="timetable-block">
+			<p><a href="#">Группы корпус А</a></p>
+			<span>24.12.2018-29.12.2018</span>
+			<p><a href="#">Преподаватели корпус А</a></p>
+			<span>24.12.2018-29.12.2018</span>
+		</div>
+		<div class="timetable-block">
+			<p><a href="#">Группы корпус Б</a></p>
+			<span>24.12.2018-29.12.2018</span>
+			<p><a href="#">Преподаватели корпус Б</a></p>
+			<span>24.12.2018-29.12.2018</span>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="contacts">
+		<ul>
+			<li itemprop="telephone">+7 (84457) 4-15-38</li>
+			<li>403889 Волгоградская область, г.Камышин, ул.Волгоградская, 47</li>
+			<li>kamkoll@yandex.ru</li>
+			<a href="#"><li>Google Maps</li></a>
+			<a href="#"><li>Карты Яндекс</li></a>
+			</ul>
+		</div>
+		<div class="copyright"></div>
+	</div>
+</body>
+<script>
+	$(function() {
+		var pull = $('#pull');
+		menu = $('nav ul');
+		menuHeight = menu.height();
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+	});
+	$(window).resize(function() {
+		var w = $(window).width();
+		if(w > 320 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+</script>
+</html>
