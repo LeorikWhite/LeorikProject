@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>О колледже</title>
+	<script src="js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+	<div class="header-menu">
+		<nav class="clearfix">
+			<ul class="clearfix">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О колледже</a></li>
+				<li><a href="#">Арбитуриенту</a></li>
+				<li><a href="#">Студенту</a></li>
+				<li><a href="#">Расписание</a></li>
+			</ul>
+			<a href="#" id="pull" class="menu-btn">Меню</a>
+		</nav>
+		<div class="menu-logo"></div>
+	</div>
+	<div class="about-college">
+		<div class="about-college-word">
+			<span>ОСНОВНЫЕ СВЕДЕНИЯ</span>
+		</div>
+		<p>Государственное автономное профессиональное образовательное учреждение «Камышинский политехнический колледж» является профессиональной образовательной организацией регионального подчинения.</p>
+		<p>Учредителем учреждения является Волгоградская область. Функции и полномочия учредителя осуществляются Комитетом образования и науки Волгоградской области.</p>
+	</div>
+	<div class="contacts-college">
+		<div class="founder-contacts">
+		<div class="founder-contacts-word">
+			<span >КОНТАКТЫ УЧРЕДИТЕЛЯ</span>
+			</div>
+			<ul>
+				<li>403889 Волгоградская область, г.Камышин, ул.Волгоградская, 47</li>
+				<li>+7 (8442) 30-86-00</li>
+				<li>+7 (8442) 30-86-87</li>
+				<li>keducation@volganet.ru</li>
+			</ul>
+			<div class="founder-contacts-word">
+			<span>ГРАФИК РАБОТЫ</span>
+			</div>
+			<ul>
+				<li>
+					понедельник-четверг: 8.30 – 17.30
+				</li>
+				<li>
+					пятница: 8.30 – 16.30
+				</li>
+				<li>
+					обеденный перерыв: 12.30 – 13.30
+				</li>
+				<li>
+					выходные: суббота, воскресенье.
+				</li>
+				<li>
+					<a href="#">obraz.volganet.ru</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+	$(function() {
+		var pull = $('#pull');
+		menu = $('nav ul');
+		menuHeight = menu.height();
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+	});
+	$(window).resize(function() {
+		var w = $(window).width();
+		if(w > 320 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+</script>
+</body>
+</html>

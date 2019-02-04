@@ -115,6 +115,19 @@ nab a#pull {
 		.menu-btn{
 			visibility: hidden;
 		}
+		.new-block {
+			display: inline-grid !important;
+			width: 30%  !important;
+			padding: 10px;
+		}
+		.new-block img{
+			padding: 0 !important;
+
+			width: 200px;
+/*			height: 120px;*/
+
+		}
+		
 	}
 .news .news-word{
 	background-color: #bcbcbc;
@@ -124,7 +137,48 @@ nab a#pull {
 }
 .news-word span{
 	padding: 10px;
-	
+	font-size: 16pt;
+}
+.about-college-word{
+	background-color: #bcbcbc;
+	padding: 5px;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.about-college p{
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	font-size: 16pt;
+	text-indent: 20px;
+}
+.founder-contacts-word {
+	background-color: #bcbcbc;
+	padding: 5px;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.founder-contacts span{
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	font-size: 16pt;
+}
+.founder-contacts ul{
+	padding: 0;
+}
+.founder-contacts li {
+	display: block;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	font-size: 16pt;
+}
+.about-college-word span{
+	padding: 10px;
 	font-size: 16pt;
 }
 .news .new-block{
